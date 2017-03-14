@@ -4,6 +4,10 @@
  * @return {string} the number as a string
  */
 
+ function numberToString(num){
+  num += "";
+  return num;
+ }
 
 /**
  * Adds one to a given number.
@@ -11,6 +15,9 @@
  * @return {number}
  */
 
+function increase(num){
+  return num + 1;
+}
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +25,9 @@
  * @return {number}
  */
 
+function decrease(num){
+  return num - 1;
+}
 
 /**
  * Adds two numbers.
@@ -25,7 +35,9 @@
  * @param {number} y
  * @return {number} the sum
  */
-
+function add(x,y){
+  return x + y;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -34,6 +46,9 @@
  * @return {number} the difference
  */
 
+function subtract (num1,num2){
+  return num1 - num2;
+}
 
 /**
  * Multiplies two numbers.
@@ -42,6 +57,9 @@
  * @return {number} the product
  */
 
+function multiply (x,y){
+  return x * y;
+}
 
 /**
  * Divides the first number by the second.
@@ -50,6 +68,9 @@
  * @return {number} the quotient
  */
 
+function divide (x,y){
+  return x/y;
+}
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +78,9 @@
  * @return {number} squared
  */
 
+function square(x){
+  return x*x;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -67,6 +91,24 @@
  * @return {number} the result
  */
 
+function calculate (operation,num1,num2){
+  if (operation==="add"){
+    console.log(num1 + " + " + num2 + " = " + add(num1,num2));
+    return add(num1,num2);
+  }
+  else if (operation==="subtract"){
+    console.log(num1 + " - " + num2 + " = " + subtract(num1,num2));
+    return subtract(num1,num2);
+  }
+  else if (operation==="multiply"){
+    console.log(num1 + " * " + num2 + " = " + multiply(num1,num2));
+    return multiply(num1,num2);
+  }
+  else if (operation==="divide"){
+    console.log(num1 + " / " + num2 + " = " + divide(num1,num2));
+    return divide(num1,num2);
+  }
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -75,6 +117,14 @@
  * @return {boolean} `a` is larger than `b`
  */
 
+function isGreaterThan(a,b){
+  if (a>b){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -83,6 +133,14 @@
  * @return {boolean} `a` is smaller than `b`
  */
 
+function isLessThan(a,b){
+  if (a<b){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -91,6 +149,14 @@
  * @return {boolean} the numbers are equal
  */
 
+function areEqual(a,b){
+  if (a===b){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -99,6 +165,14 @@
  * @return {number} the smallest number
  */
 
+function minimum(a,b){
+  if (a<b){
+    return a;
+  }
+  else{
+    return b;
+  }
+}
 
 /**
  * Returns the largest value of two numbers.
@@ -106,6 +180,15 @@
  * @param {number} y
  * @return {number} the largest number
  */
+
+function maximum(a,b){
+  if (a>b){
+    return a;
+  }
+  else{
+    return b;
+  }
+}
 
 
 /**
