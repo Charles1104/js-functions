@@ -197,6 +197,14 @@ function maximum(a,b){
  * @return {boolean} the number is even
  */
 
+function isEven(n){
+  if(n%2 === 0){
+  return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /**
  * Returns true if `n` is odd.
@@ -204,6 +212,14 @@ function maximum(a,b){
  * @return {boolean} the number is odd
  */
 
+function isOdd(n){
+  if(n%2 !== 0){
+  return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /**
  * Returns a letter grade.
@@ -217,6 +233,23 @@ function maximum(a,b){
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade(score,maxscore,grade){
+  if (score/maxscore>=0.9){
+    return "A";
+  }
+  else if (score/maxscore>=0.8){
+    return "B";
+  }
+  else if (score/maxscore>=0.7){
+    return "C";
+  }
+  else if (score/maxscore>=0.6){
+    return "D";
+  }
+  else {
+    return "F";
+  }
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -226,6 +259,16 @@ function maximum(a,b){
  * @return {object} restaurant
  */
 
+function incrementReviews(restaurant){
+  if (typeof(restaurant.reviews) === "undefined"){
+    restaurant.reviews =1;
+  }
+
+  else {
+    restaurant.reviews +=1;
+  }
+  return restaurant;
+}
 
 /**
  * Joins two strings with a space.
@@ -234,6 +277,9 @@ function maximum(a,b){
  * @return {string} joined the words joined with a space
  */
 
+function combine(string1, string2){
+  return string1 + " " + string2;
+}
 
 /**
  * Returns a circle object with the properties `circumference` and `area`.
@@ -243,3 +289,10 @@ function maximum(a,b){
  * @return {object} circle
  */
 
+function createCircle(radius){
+  var circle = {
+    circumference: 2*Math.PI*radius,
+    area: Math.PI * Math.pow(radius,2)
+  };
+  return circle;
+}
